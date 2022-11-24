@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         xmlns:local="clr-namespace:App4.Views"
+             x:Class="App4.AppShell">
+    <FlyoutItem Title="Добавить жанры">
+        <ShellContent Title="Первая верхняя" Route="FirstPage"
+                      ContentTemplate
+                      ="{DataTemplate local:FirstPage}"/> 
+        <!--сод. страницы-->
+    </FlyoutItem>
+
+    <FlyoutItem Title="Добавить книги">
+      
+        
+            <ShellContent Route="SecondPage"
+                      ContentTemplate
+                      ="{DataTemplate local:SecondPage}"/>
+
+        
+    </FlyoutItem>
+
+    <FlyoutItem Title="Книги">
+
+
+        <ShellContent Route="SecondPage"
+                      ContentTemplate
+                      ="{DataTemplate local:ThreePage}"/> <!--Расположение файла, tabbar меню скрыто-->
+
+
+    </FlyoutItem>
+
+    <MenuItem Text="Выйти" Clicked="MenuItem_Clicked"/>
+
+    <TabBar>
+        <ShellContent Route="LoginPage"
+                      ContentTemplate
+                      ="{DataTemplate local:LoginForm}"/>
+    </TabBar>
+</Shell>
